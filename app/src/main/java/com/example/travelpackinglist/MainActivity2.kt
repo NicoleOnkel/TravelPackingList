@@ -1,5 +1,6 @@
 package com.example.travelpackinglist
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -9,6 +10,7 @@ import androidx.core.view.WindowInsetsCompat
 import java.io.File.separator
 
 class MainActivity2 : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -20,11 +22,16 @@ class MainActivity2 : AppCompatActivity() {
         }
 
         val items = intent.getStringArrayListExtra("itemslists")
+        val total = intent.getIntExtra("totalClothing", 0)
 
         val saveditems = findViewById<TextView>(R.id.displayitems)
+        val totalclothing = findViewById<TextView>(R.id.totalit)
 
 
         //Display
         saveditems.text= items?.joinToString(separator = "\n")
+        totalclothing.text = "total: $total"
+
+
     }
 }

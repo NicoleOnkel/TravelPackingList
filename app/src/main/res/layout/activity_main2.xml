@@ -11,6 +11,17 @@
         android:id="@+id/displayitems"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text=""
+        android:textSize="30dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/totalit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
         android:text=""
         android:textSize="30dp">
 
