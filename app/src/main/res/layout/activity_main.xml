@@ -8,13 +8,6 @@
     android:gravity="center"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        />
-
-
 
     <Button
         android:id="@+id/additem"
@@ -24,13 +17,31 @@
 
     </Button>
 
-    <EditText
-        android:id="@+id/theinputBox"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Add Item"
-        android:inputType="text"
-        android:minHeight="48dp" />
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/theinputBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Add Item"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/savbttn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Save">
+
+        </Button>
+
+    </LinearLayout>
+
+
 
 
 </LinearLayout>
