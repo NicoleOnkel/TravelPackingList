@@ -70,6 +70,7 @@ class MainActivity : AppCompatActivity() {
         viewlistBttn.setOnClickListener {
             val intent = Intent(this, MainActivity2::class.java)
             intent.putStringArrayListExtra("itemslists", ArrayList(Clothingitems))
+            intent.putExtra("totalclothing", totalinClothing)
             startActivity(intent)
         }
     }
