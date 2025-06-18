@@ -6,6 +6,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import java.io.File.separator
 
 class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,12 +19,12 @@ class MainActivity2 : AppCompatActivity() {
             insets
         }
 
-        val items = intent.getIntExtra("itemslists", 0)//get saved items
+        val items = intent.getStringArrayListExtra("itemslists")
 
         val saveditems = findViewById<TextView>(R.id.displayitems)
 
 
         //Display
-        saveditems.text 
+        saveditems.text= items?.joinToString(separator = "\n")
     }
 }

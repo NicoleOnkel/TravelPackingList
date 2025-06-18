@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         val viewlistBttn = findViewById<Button>(R.id.viewlst)//view items button on next screen
 
         //ARRAYS
-        val items = arrayOf("")
+        val items = mutableListOf<String>()
 
 
 
@@ -43,17 +43,27 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        //Saving items in aray
+
+
+        //Saving items in array
         savebutton.setOnClickListener {
-            if (savebutton.isEnabled == true)
-                items
+
+            var frominputbox = inputbox.text.toString()
+            if(frominputbox.isNotEmpty())
+            items.add(frominputbox)
+            inputbox.text.clear()//clear text
+
+
+
+
+
 
         }
 
 
         viewlistBttn.setOnClickListener {
             val intent = Intent(this, MainActivity2::class.java)
-            intent.putExtra("itemslists", items)
+            intent.putStringArrayListExtra("itemslists", ArrayList(items))
             startActivity(intent)
         }
     }
