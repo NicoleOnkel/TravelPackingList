@@ -14,12 +14,23 @@
         android:text="Hello World!"
         />
 
+
+
     <Button
         android:id="@+id/additem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Item">
+        android:text="Add to Packing List">
 
     </Button>
+
+    <EditText
+        android:id="@+id/theinputBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Add Item"
+        android:inputType="text"
+        android:minHeight="48dp" />
+
 
 </LinearLayout>

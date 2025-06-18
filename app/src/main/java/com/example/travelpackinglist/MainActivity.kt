@@ -3,6 +3,7 @@ package com.example.travelpackinglist
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -20,14 +21,20 @@ class MainActivity : AppCompatActivity() {
         }
 
         val additems = findViewById<Button>(R.id.additem) // add items button
+        val inputbox = findViewById<EditText>(R.id.theinputBox) //input box
+
 
 
 
 
         additems.setOnClickListener {
+            if (additems.isEnabled == true)
+                inputbox.EditText
 
-            val intent = Intent(this, MainActivity2::class.java)
-            startActivity(intent)
+
+
+
+
 
         }
 
