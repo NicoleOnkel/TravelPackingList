@@ -29,7 +29,11 @@ class MainActivity : AppCompatActivity() {
         val viewlistBttn = findViewById<Button>(R.id.viewlst)//view items button on next screen
 
         //ARRAYS
-        val items = mutableListOf<String>()
+        val Clothingitems = mutableListOf<String>()
+        val Toiletriesitems = mutableListOf<String>()
+        val Documentitems = mutableListOf<String>()
+
+        val totalinClothing = mutableListOf<Int>()
 
 
 
@@ -50,7 +54,7 @@ class MainActivity : AppCompatActivity() {
 
             var frominputbox = inputbox.text.toString()
             if(frominputbox.isNotEmpty())
-            items.add(frominputbox)
+            Clothingitems.add(frominputbox)
             inputbox.text.clear()//clear text
 
 
@@ -63,7 +67,7 @@ class MainActivity : AppCompatActivity() {
 
         viewlistBttn.setOnClickListener {
             val intent = Intent(this, MainActivity2::class.java)
-            intent.putStringArrayListExtra("itemslists", ArrayList(items))
+            intent.putStringArrayListExtra("itemslists", ArrayList(Clothingitems))
             startActivity(intent)
         }
     }
