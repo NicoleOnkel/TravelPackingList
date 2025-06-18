@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         val Toiletriesitems = mutableListOf<String>()
         val Documentitems = mutableListOf<String>()
 
-        val totalinClothing = mutableListOf<Int>()
+        var totalinClothing = 0
 
 
 
@@ -56,6 +56,8 @@ class MainActivity : AppCompatActivity() {
             if(frominputbox.isNotEmpty())
             Clothingitems.add(frominputbox)
             inputbox.text.clear()//clear text
+            if (savebutton.isEnabled == true)
+            {totalinClothing++}
 
 
 
